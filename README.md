@@ -11,6 +11,8 @@ A project for detecting person without mask and identifying that person with tim
 ## Project:
 This Project is a Combination of **Faster-RCNN-Inception-v2-coco** and **Custom Image classification model** for identifying person.
 
+
+
 ### WebApp:
 
 
