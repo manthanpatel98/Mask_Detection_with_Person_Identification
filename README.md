@@ -39,9 +39,23 @@ So, That makes it like below:
 
 ---
 
-
-
 #### Understanding Faster-RCNN:
+
+* Faster RCNN is **attention based** and one of the classic algorithms in Object Detection. Faster RCNN solves the problems of RCNN and Fast RCNN by introducing **RPN** (Region Proposal Network) instead of using hard coded algorithm like **selective search**. 
+
+**Structure:**
+
+<img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/FRCN_architecture.png" width=500>
+
+
+1. Conv Layers: This Newtwork is a combination of Conv Layers, activation function and pooling layers which extracts feature maps from the given input image. This feature map will be later shared with RPN.
+
+2. RPN: It is used to generate Region Proposals which uses softmax to classify the candidate box.and use bbox to perform regression correction on the candidate box to obtain the proposals. 
+
+3. RoI pooling: Collect feature maps and proposals, extract the proposal feature map, and send it to the subsequent fully connected layer to determine the target category. 
+
+4. Classification: Uses the proposal feature map to calculate the proposal category, and bbox regression again to obtain a more accurate positioning.
+
 
 #### 
 
