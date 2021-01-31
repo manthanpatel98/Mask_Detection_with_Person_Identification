@@ -9,11 +9,19 @@ A project for detecting person without mask and identifying that person with tim
 ---
 
 ## Project:
-This Project is a Combination of **Faster-RCNN-Inception-v2-coco** and **Custom Image classification model** for identifying person.
+* This Project is a Combination of **Faster-RCNN-Inception-v2-coco** and **Custom Image classification model** for identifying person.
+* Dataset used for Mask Detection is on [Kaggle](https://www.kaggle.com/andrewmvd/face-mask-detection) and custom dataset is used for Person Identification.
+
 
 
 
 ### WebApp:
+
+<img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/gif.gif">
+
+**Downloaded CSV file:**
+
+<img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/Screenshot%20(473).png" width=500>
 
 
 
@@ -63,7 +71,7 @@ So, That makes it like below:
 
 * Integreted Custom Image Classification model is trained on **2** classes: **Manthan** and **Unknown**. (Model with More num of classes can be trained and used here.)
 
-* Below is the model structure created with **[Netron]**.(https://netron.app/)
+* Below is the model structure created with **[Netron]**(https://netron.app/).
 
 <img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/best_model.h5.png">
 
