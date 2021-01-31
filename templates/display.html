@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   <!--- <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">--->
+
+
+</head>
+<body>
+    
+<div class="container">
+    <nav class="navbar" style="background-color:black;">
+        <div class="container">
+            <h2 class="navbar-brand" ><h2 style="color:white; text-align:center;">Detected Output</h2></h2>
+            
+        </div>
+    </nav>
+    
+    <div class="csv-class">
+    <h3 class="csv-text"> Download CSV file of records</h3> 
+    <a href="{{ url_for('download_file') }}" download>
+    <button class="btn"><i class="fa fa-download"></i>Download CSV</button>
+    </a>
+    </div>
+
+        <div class="row">
+        {% if person_imgs: %}
+        <h3 class="title-text"> People without mask.</h3>
+            {% for image in mask_detect_imgs: %}
+            
+            <div class="column">   
+                <img src=" {{url_for('send_image_detected',filename=image)}}">    
+            </div>
+            
+            <br>
+            {% endfor %}
+            
+        {% endif %}
+        
+        {% if not person_imgs: %}
+        <h3 class="title-text"> People with mask.</h3>
+            <div class="column">
+                    <img src=" {{url_for('send_image_detected',path='./test_images/output/detected', filename=mask_detect_imgs[0])}}">
+            </div>
+        </div>
+        {% endif %}
+</div>
+
+
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+</body>
+
+
+<style>
+
+
+.title-text{
+    text-align: center;
+}
+    
+
+
+img{
+    width: 50%;
+    border: 1px solid black;
+    margin: auto;
+    display: block;
+}
+
+.btn {
+  background-color: DodgerBlue;
+
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+
+
+</style>
+</html>

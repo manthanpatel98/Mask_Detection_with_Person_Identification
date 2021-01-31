@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/formc.css') }}">-->
+<title>Mask Detection with Person Identification</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="head">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand">Mask Detection with Person Recognition Project</a>
+                
+            </div>
+        </nav>
+        
+    
+
+    <div class="form_div">
+    <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" class="form-container">
+
+        <h4 class="text-left font-weight-bold">Upload Image:</h4>
+    
+        <div class="file_select"><h5><input id="file-picker" type="file" name="file" accept="image/*" multiple required></h5></div>
+        
+        <!---<input type="submit" value="Check" id="upload-button">--->
+        <div class="button_click"><button class='button'>Detect</button></div>
+        
+    </form>
+    </div>
+
+    <div class="title-text"><h4>Mask Detection with Identifying People who have not worn mask.</h4></div>
+
+</body>
+<style>  
+.head{
+    text-align: center;
+}
+.title-text{
+    padding-top: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+.file_select{
+  padding-top: 5px;
+}
+
+.button_click{
+  padding-top: 5px;
+  
+}
+
+.form_div{
+  padding-left: 35%;
+padding-top: 8%;
+padding-right: 35%;
+}
+.form-container{
+  
+  padding: 30px;
+
+background: #fff;
+border-radius: 5px;
+align-content: left;
+border-radius: 10px;
+
+top:-40px;
+left:40px;
+
+box-shadow: 0px 0px 10px 0px;
+text-align: left; 
+}
+
+.button {
+  padding-top: 3px;
+padding: 8px 13px;
+font-size: 20px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #ff00ff;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+background-color: #3e8e41;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+</style>
+
+<script>
+
+    $("#file-picker").change(function(){
+
+        var input = document.getElementById('file-picker');
+
+        for (var i=0; i<input.files.length; i++)
+        {
+        //koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
+            var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+
+            if ((ext == 'jpg') || (ext == 'png') || (ext == 'jpeg'))
+            {
+                $("#msg").text("Files are supported")
+            }
+            else
+            {
+                $("#msg").text("Files are NOT supported")
+                document.getElementById("file-picker").value ="";
+            }
+
+        }
+
+
+    } );
+
+</script>
+</html>
