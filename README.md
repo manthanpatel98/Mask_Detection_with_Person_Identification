@@ -52,22 +52,22 @@ So, That makes it like below:
 <img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/FRCN_architecture.png" width=500>
 
 
-1. Conv Layers: This Newtwork is a combination of Conv Layers, activation function and pooling layers which extracts feature maps from the given input image. This feature map will be later shared with RPN.
+1. **Conv Layers:** This Newtwork is a combination of Conv Layers, activation function and pooling layers which extracts feature maps from the given input image. This feature map will be later shared with RPN.
 
-2. RPN: It is used to generate Region Proposals which uses softmax to classify the candidate box.and use bbox to perform regression correction on the candidate box to obtain the proposals. 
+2. **RPN:** It is used to generate Region Proposals which uses softmax to classify the candidate box.and use bbox to perform regression correction on the candidate box to obtain the proposals. 
 
-3. RoI pooling: Collect feature maps and proposals, extract the proposal feature map, and send it to the subsequent fully connected layer to determine the target category. 
+3. **RoI pooling:** Collects feature maps and proposals, extract the proposal feature map, and send it to the subsequent fully connected layer to determine the target category. 
 
-4. Classification: Uses the proposal feature map to calculate the proposal category, and bbox regression again to obtain a more accurate positioning.
+4. **Classification:** Uses the proposal feature map to calculate the proposal category, and bbox regression again to obtain a more accurate positioning.
 
-* The classical detection methods are very time-consuming. Faster rcnn can use RPN to automatically generate candidate frames, which greatly improves the speed of generating candidate frames. That is why Faster RCNN is much better than RCNN and Fast RCNN.
+* The classical detection methods are very **time-consuming**. Faster rcnn can use RPN to **automatically generate candidate frames**, which greatly improves the speed of generating candidate frames. That is why Faster RCNN is much better than RCNN and Fast RCNN.
 
 
 ### Image Classification model:
 
 * Integreted Custom Image Classification model is trained on **2** classes: **Manthan** and **Unknown**. (Model with More num of classes can be trained and used here.)
 
-* Below is the model structure created with **[Netron]**(https://netron.app/).
+* Below is the model structure created with **[Netron](https://netron.app/)**.
 
 <img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/best_model.h5.png">
 
