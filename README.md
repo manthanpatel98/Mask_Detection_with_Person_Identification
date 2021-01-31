@@ -56,8 +56,16 @@ So, That makes it like below:
 
 4. Classification: Uses the proposal feature map to calculate the proposal category, and bbox regression again to obtain a more accurate positioning.
 
+* The classical detection methods are very time-consuming. Faster rcnn can use RPN to automatically generate candidate frames, which greatly improves the speed of generating candidate frames. That is why Faster RCNN is much better than RCNN and Fast RCNN.
 
-#### 
+
+#### Image Classification model:
+
+* Integreted Custom Image Classification model is trained on **2** classes: **Manthan** and **Unknown**. (Model with More num of classes can be trained and used here.)
+
+* Below is the model structure created with **[Netron]**.(https://netron.app/)
+
+<img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/best_model.h5.png">
 
 
 
