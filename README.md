@@ -17,7 +17,7 @@ A project for detecting person without mask and identifying that person with tim
 
 <img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/Screenshot%20(473).png" width=500>
 
-
+---
 
 ## Project:
 * This Project is a Combination of **Faster-RCNN-Inception-v2-coco** and **Custom Image classification model** for identifying person.
@@ -41,7 +41,7 @@ So, That makes it like below:
 
 <img src="https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/Readme_Img/Slide.JPG" width=700>
 
----
+
 
 ### Understanding Faster-RCNN:
 
@@ -79,7 +79,9 @@ So, That makes it like below:
 
 * Main file for detection and classification is located in [mask_detector_and_person_classifier](https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/tree/main/mask_detector_and_person_classifier) folder.
 
-* [mask_detector_and_person_classifier](https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/tree/main/mask_detector_and_person_classifier) has paths to frozen_inference_graph.pb and labelmap.pbtxt which should be changed if someone trains their own models.
+* [detector.py](https://github.com/manthanpatel98/Mask_Detection_with_Person_Identification/blob/main/mask_detector_and_person_classifier/detector.py) has paths to frozen_inference_graph.pb and labelmap.pbtxt which should be changed if someone trains their own models.
+
+---
 
 ## Improvements:
 * As an improvement, we can use much faster models **SSD** and **YOLO** as Object Detection Model.
