@@ -88,6 +88,12 @@ So, That makes it like below:
 * Same way, Image Classification model can be replaced as per need.
 * **An improved system can be useful for detecting people without mask which can be useful to stop the spread of virus by making more strict rules in premises.**
 
+## Setup:
+* For Implementing project follow [TFOD Installation](https://inblog.in/TFOD-Installation-Object-Detection-ZEBMHporCF) Process.
+* Create Anaconda Environment: **conda create -n new_env python=3.6** 
 
+* Install libraries: **pip install -r requirements.txt**
+
+* Run python file: **python app.py**
 
 
