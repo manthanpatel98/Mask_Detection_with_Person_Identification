@@ -6,6 +6,8 @@ A project for detecting person without mask and identifying that person with tim
 ## Motivation:
 * To create a combination of **Object detection model** and **Image classification model**, to detect person with no mask and identifying that person to store the timing and name of person in a downloadable csv file with webapp.
 
+* Basically, Idea is to get the number of people without mask per days on premises. Its intent is not to discriminate or have control over anyone.
+
 ---
 
 
