@@ -86,7 +86,7 @@ So, That makes it like below:
 ## Improvements:
 * As an improvement, we can use much faster models like **SSD** and **YOLO** as Object Detection Model or **we can do more training with more images and num of steps with Faster RCNN** (In this project, mask detection model is trained for 2000 epochs so it can be trained for more number of steps for better accuracy.)
 * Same way, Image Classification model can be replaced as per need.
-* **An improved system can be useful for detecting people without mask which can be useful to stop the spread of virus by making more strict rules on premises.**
+* **An improved system can be useful for detecting people which can be useful to stop the spread of virus by making more strict rules on premises.**
 
 ## Setup:
 * For Implementing project follow [TFOD Installation](https://inblog.in/TFOD-Installation-Object-Detection-ZEBMHporCF) Process.
